@@ -71,12 +71,6 @@ static PyTypeObject ue_PyFAutomationEditorCommonUtilsType = {
 	0,
 };
 
-static int py_ue_fautomation_editor_common_utils_init(ue_PyFAutomationEditorCommonUtils *self, PyObject * args)
-{
-	PyErr_SetString(PyExc_Exception, "FAutomationEditorCommonUtils is a singleton");
-	return -1;
-}
-
 void ue_python_init_fautomation_editor_common_utils(PyObject *ue_module)
 {
 	ue_PyFAutomationEditorCommonUtilsType.tp_new = PyType_GenericNew;
@@ -88,3 +82,11 @@ void ue_python_init_fautomation_editor_common_utils(PyObject *ue_module)
 	Py_INCREF(&ue_PyFAutomationEditorCommonUtilsType);
 	PyModule_AddObject(ue_module, "FAutomationEditorCommonUtils", (PyObject *)&ue_PyFAutomationEditorCommonUtilsType);
 }
+
+static int py_ue_fautomation_editor_common_utils_init(ue_PyFAutomationEditorCommonUtils *self, PyObject * args)
+{
+	PyErr_SetString(PyExc_Exception, "FAutomationEditorCommonUtils is a singleton");
+	return -1;
+}
+
+

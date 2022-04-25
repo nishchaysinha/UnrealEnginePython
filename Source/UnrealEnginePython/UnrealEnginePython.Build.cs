@@ -16,14 +16,7 @@ public class UnrealEnginePython : ModuleRules
     // on Linux an include;libs syntax is expected:
     //private string pythonHome = "/usr/local/include/python3.6;/usr/local/lib/libpython3.6.so";
 
-    private string[] windowsKnownPaths =
-    {
-       // "C:/Program Files/Python37",
-        "C:/Program Files/Python36",
-        "C:/Program Files/Python35",
-        "C:/Python27",
-        "C:/IntelPython35"
-    };
+
 
     private string[] macKnownPaths =
     {
@@ -36,6 +29,16 @@ public class UnrealEnginePython : ModuleRules
         "/System/Library/Frameworks/Python.framework/Versions/3.5",
         "/System/Library/Frameworks/Python.framework/Versions/2.7"
     };
+    
+    private string[] windowsKnownPaths =
+    {
+       // "C:/Program Files/Python37",
+        "C:/Program Files/Python36",
+        "C:/Program Files/Python35",
+        "C:/Python27",
+        "C:/IntelPython35"
+    };
+
 
     private string[] linuxKnownIncludesPaths =
     {
